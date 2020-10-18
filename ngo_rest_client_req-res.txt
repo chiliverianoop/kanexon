@@ -1,0 +1,42 @@
+http://localhost:8080/saveNgoDetails
+Method type : POST
+Request body below
+
+{
+   "ngoUniqueId": "ngo1",
+   "ngoName":"name1",
+   "ngoPhone":123,
+   "ngoEmail": "ngo1@test.com",
+   "ngoContactName":"12345",
+   "adult": false,
+   "password": "ngo1p"
+}
+
+------------------------------
+http://localhost:8080/updateNgoDetails
+Request body below
+{
+   "ngoUniqueId": "ngo1",
+   "ngoName":"name1update",
+   "ngoPhone":123,
+   "ngoEmail": "ngo1@test.com",
+   "ngoContactName":"12345",
+   "adult": false,
+   "password": "ngo1p"
+}
+-------------------
+
+http://localhost:8080/getNgoDetails?ngoUniqueId=ngo1
+Method type : Get
+Request param  : ngoUniqueId
+
+Response:
+{
+    "ngoUniqueId": "ngo1",
+    "ngoName": "name1update",
+    "ngoContactName": "12345",
+    "ngoEmail": "ngo1@test.com",
+    "adult": false,
+    "ngoPhone": "123",
+    "password": "ngo1p"
+}
